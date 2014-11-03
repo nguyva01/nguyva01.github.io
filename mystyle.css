@@ -3,6 +3,9 @@
          color: blue;
          font-size: 28pt;
       }
-          title {color:rgb(250,10,250);fontsize: 23}
+          title {
+                color:rgb(250,10,250);
+                fontsize: 23;
+                }
      
 </style>
