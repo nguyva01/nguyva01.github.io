@@ -1,5 +1,18 @@
 <html>
-<head>
-<link rel="stylesheet" href="mystyle.css" type="text/css">
-</head>
+   <head>
+      <style>
+      h1 {
+         color: blue;
+         font-size: 28pt;
+      }
+          h1 {color:rgb(250,10,250);fontsize: 23}
+         body {background_image: URL: "http://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0CAcQjRw&url=http%3A%2F%2Fwww.mirror.co.uk%2Fnews%2Fuk-news%2Fuk-weather-snow-ice-and-subzero-1527009&ei=QvNXVKL9E9iqyAS0mIHQBw&bvm=bv.78677474,d.aWw&psig=AFQjCNGe_dwuuee-wUeVU2z9Ex5E7E2MKQ&ust=1415136447618490"}
+      </style>
+   </head>
+   <body>
+      <h1>Hello World!!</h1>
+      <p>The paragraph text should be unchanged</p>
+      <h2>I am not blue!</h2>
+      <h1>Hello Again</h1>
+   </body>
 </html>
