@@ -1,5 +1,6 @@
-body
-{background-image: url ("http://dreamatico.com/data_images/snow/snow-1.jpg");}
+body {
+background-image: url ("http://dreamatico.com/data_images/snow/snow-1.jpg");
+  }
 
 .vegie{
 background-color:green;}
