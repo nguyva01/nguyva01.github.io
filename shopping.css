@@ -1,6 +1,10 @@
 body {
 background-image: url ("http://dreamatico.com/data_images/snow/snow-1.jpg")
   }
+li#123{
+  text-decoration: line-through;
+}
+
 .vegie{
 background-color:green;}
 .meat{
