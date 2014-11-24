@@ -8,6 +8,7 @@
     height: 200px;
     width: 205px;
     }
+    
   section {
     position: absolute;
     top: 20;
@@ -33,8 +34,20 @@
   </style>
 </head>
 <body>
+
+
+<script type="text/javascript"> 
+counter = 0
+updateCounter = function() {
+  counter = counter + 1;
+  counterSpot = document.querrySelector :('#myCounter');
+  counterSpot.innerHTML = "correct: "; + counter;
+ 
+}
+  
+</script>
 <nav>
-<input type="checkbox"> 
+<input type="checkbox" onclick="updateCounter();"> 
 <section class="question"> 
   <p> What is the maximum time one person can stop breathing without dying? </p>
 </section>
@@ -43,7 +56,7 @@
 </section>
 </nav>
 <nav>
-<input type="checkbox"> 
+<input type="checkbox" onclick="updateCounter();"> 
 <section class="question">
   <p> What is the date of thanksgiving 2014?</p>
 </section>
@@ -52,7 +65,7 @@
   </section>
   </nav>
   <nav>
-  <input type="checkbox"> 
+  <input type="checkbox" onclick="updateCounter();"> 
     <section class="question">
     <p> Where is Vietnam?</p>
     </section>
@@ -60,5 +73,6 @@
       <p> South East Asia </p>
     </section>
 </nav>
+h2 id
 </body>
 </html>
