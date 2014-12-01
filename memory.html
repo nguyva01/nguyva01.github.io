@@ -36,14 +36,19 @@
 <body>
 <script type="text/javascript"> 
 counter = 0
-updateCounter = function() {
-  counter = counter + 1;
+updateCounter = function(cbId) {
+  theCheckbox= document.querySelector("#"+cbId);
+  if (theCheckbox.checked) {
+    counter = counter + 1;
+  } else {
+    counter = counter - 1;
+  }
   counterSpot = document.querrySelector('#myCounter');
   counterSpot.innerHTML = "Correct: " + counter;
 }
 </script>
 <nav>
-<input type="checkbox" onclick="updateCounter();"> 
+<input id="cb1" type="checkbox" onclick="updateCounter(\'cb1\');"> 
 <section class="question"> 
   <p> What is the maximum time one person can stop breathing without dying? </p>
 </section>
@@ -52,7 +57,7 @@ updateCounter = function() {
 </section>
 </nav>
 <nav>
-<input type="checkbox" onclick="updateCounter();"> 
+<input id="cb2" type="checkbox" onclick="updateCounter(\'cb2\');"> 
 <section class="question">
   <p> What is the date of thanksgiving 2014?</p>
 </section>
@@ -61,7 +66,7 @@ updateCounter = function() {
   </section>
   </nav>
   <nav>
-  <input type="checkbox" onclick="updateCounter();"> 
+  <input id="cb3"  type="checkbox" onclick="updateCounter(\'cb3\');"> 
     <section class="question">
     <p> Where is Vietnam?</p>
     </section>
@@ -69,6 +74,6 @@ updateCounter = function() {
       <p> South East Asia </p>
     </section>
 </nav>
-<h2 id="myCounter"> Correct: 0</h2>
+<h2 id="myCounter"> Correct: 0 </h2>
 </body>
 </html>
