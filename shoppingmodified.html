@@ -6,21 +6,31 @@
 <body>
 <h1> Weekend Shopping</h1>
 <p1> In order to prepare for my weekend cooking and gathering with friends in our cluster, I made a list of shopping items</p1>
-<ul>
+<ul id="grocerylist">
 </ul>
-<input type="text" value="Insert item" onchange ='insertItem()'  size="40"> 
+<aside></aside>
+<label> for="grocerybox">Grocert Item </label>
+<input type="text" id="grocerybox" onclick ='insertItem()'  size="40"> 
 
-<select id="priority">
+<select id="category">
   <option> </option>
   <option> Meat </option>
   <option> Vegie </option>
   <option> Sauce </option>
 </select> 
-<button onclick='add();'> Add </button>
+<button onclick='additem();'> New </button>
+</aside>
+
 <script>
-  add  = function () {
-    text=document.querySelector('#insertItem').value;
-    }
+  additem  = function () {
+    myUL=document.querySelector('#grocerylist');
+    myTextBox=document.querySelector('#grocerybox');
+    myLi= document.createElement('li');
+    myGrocery= document.createTextMade ('myTextBox.value');
+    myLi.appendChild(myGrocery);
+    myUL.appendChild(myLi);
+    myTextBox.value = "";
+  }
   
   
 </script>
