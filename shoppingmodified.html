@@ -7,9 +7,6 @@
 <h1> Weekend Shopping</h1>
 <p1> In order to prepare for my weekend cooking and gathering with friends in our cluster, I made a list of shopping items</p1>
 <ul id="grocerylist">
-<li> Meat </li>
-<li> Vegie </li>
-<li> Sauce </li>  
 </ul>
 <aside>
 <label for="grocerybox">Grocery Item </label>
@@ -29,7 +26,7 @@
     myUL=document.querySelector('#grocerylist');
     myTextBox=document.querySelector('#grocerybox');
     myLi= document.createElement('li');
-    myGrocery= document.createTextMade ('myTextBox.value');
+    myGrocery= document.createTextNode (myTextBox.value);
     myLi.appendChild(myGrocery);
     myUL.appendChild(myLi);
     myTextBox.value = "";
