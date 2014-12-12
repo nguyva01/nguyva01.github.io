@@ -45,7 +45,7 @@ index = 0;
     myCb.setAttribute("type","checkbox");
     myCb.setAttribute("id","cbx"+index)
     myCb.setAttribute("value",index)
-    myCb.onChange = function(myCb){
+    myCb.onClick = function(myCb){
       alert("Change")
       idIndex=myCb.getAttribute("value");
       if(myCb.checked){
