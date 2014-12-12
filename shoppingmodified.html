@@ -25,13 +25,19 @@
   additem  = function () {
     myUL=document.querySelector('#grocerylist');
     myTextBox=document.querySelector('#grocerybox');
+    
     myLi= document.createElement('li');
     myGrocery= document.createTextNode (myTextBox.value);
-    myLi.appendChild(myGrocery);
-    myUL.appendChild(myLi);
-    myTextBox.value = "";
+    //myLi.appendChild(myGrocery);
+    //myUL.appendChild(myLi);
+    
     myCb=document.createElement('input');
-    myCb.type='checkbox';
+    myCb.setAttribute("type","checkbox");
+    myCb.setAttribute("value",myGrocery)
+    myUL.appendChild(myLi);
+    
+    // Unset
+    myTextBox.value = "";
   }
 
   
