@@ -25,19 +25,14 @@
 //onclick ='insertItem()' 
   index = 0;
   changeCbx = function(idIndex){
-      alert("Change")
       myCb = document.querySelector('#cbx'+idIndex);
       
       if(myCb.checked){
         label = document.querySelector('#lbl'+idIndex);
         label.setAttribute("style","text-decoration: line-through") ;
-        alert("Checked")
-        alert(label.innerHTML)
-        console.log(label)
       } else {
         label = document.querySelector('#lbl'+idIndex);
         label.setAttribute("style","none") ;
-        alert("UnChecked")
       }
     }
     
