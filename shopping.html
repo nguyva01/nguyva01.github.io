@@ -6,19 +6,72 @@
 <body>
 <h1> Weekend Shopping</h1>
 <p1> In order to prepare for my weekend cooking and gathering with friends in our cluster, I made a list of shopping items</p1>
-<ul class="checkmark">
-<li id="123" class= "vegie mark"> Letuce </li>
-<li class= "vegie mark"> Tomatoes </li>
-<li class= "vegie"> Cucumbers </li>
-<li class="carb mark"> Noodles </li>
-<li class= "meat mark"> Pork </li>
-<li class="meat"> Chicken breast</li>
-<li class="meat"> Ground beef</li>
-<li class="sauce"> Fish sauce</li>
-<li class="object  mark"> Cups </li>
-<li class="vegie"> Carrots</li>
+<ul id="grocerylist">
 </ul>
+<aside>
+<label for="grocerybox">Grocery Item </label>
+<input type="text" id="grocerybox" size="40">
+
+<select id="category">
+  <option> </option>
+  <option> Meat </option>
+  <option> Vegie </option>
+  <option> Sauce </option>
+</select> 
+<button onclick='additem();'> New </button>
+</aside>
+
+<script>
+//onclick ='insertItem()' 
+  index = 0;
+  changeCbx = function(idIndex){
+      myCb = document.querySelector('#cbx'+idIndex);
+      
+      if(myCb.checked){
+        label = document.querySelector('#lbl'+idIndex);
+        label.setAttribute("style","text-decoration: line-through") ;
+      } else {
+        label = document.querySelector('#lbl'+idIndex);
+        label.setAttribute("style","none") ;
+      }
+    }
+    
+  additem  = function () {
+    index++;
+    myUL=document.querySelector('#grocerylist');
+    myTextBox=document.querySelector('#grocerybox');
+    
+    myLi= document.createElement('li');
+    //myGrocery= document.createTextNode (myTextBox.value);
+    //myLi.appendChild(myGrocery);
+    //myUL.appendChild(myLi);
+    
+    // Create Elements
+    myDiv = document.createElement('div');
+    myLbl = document.createElement("label")
+    myCb = document.createElement('input');
+    
+    // Set values
+    myLbl.innerHTML=myTextBox.value;
+    myLbl.setAttribute("id","lbl"+index)
+    
+    myCb.setAttribute("type","checkbox");
+    myCb.setAttribute("id","cbx"+index)
+    myCb.setAttribute("value",index)
+    myCb.setAttribute("onClick","changeCbx('"+index+"')");
+    myDiv.appendChild(myCb);
+    myDiv.appendChild(myLbl)
+    myUL.appendChild(myDiv);
+    
+    // Unset
+    myTextBox.value = "";
+  }
+
+  
+
+</script>
 </body>
 </html>
+
 
 
