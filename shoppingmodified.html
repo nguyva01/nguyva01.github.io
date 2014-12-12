@@ -10,7 +10,7 @@
 </ul>
 <aside>
 <label for="grocerybox">Grocery Item </label>
-<input type="text" id="grocerybox" onclick ='insertItem()'  size="40"> 
+<!--<input type="text" id="grocerybox" onclick ='insertItem()'  size="40"> -->
 
 <select id="category">
   <option> </option>
@@ -46,6 +46,7 @@ index = 0;
     myCb.setAttribute("id","cbx"+index)
     myCb.setAttribute("value",index)
     myCb.onChange = function(myCb){
+      alert("Change")
       idIndex=myCb.getAttribute("value");
       if(myCb.checked){
         label = document.querySelector('#lbl'+idIndex);
