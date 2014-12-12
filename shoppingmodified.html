@@ -50,9 +50,13 @@ index = 0;
       if(myCb.checked){
         label = document.querySelector('#lbl'+idIndex);
         label.setAttribute("style","text-decoration: line-through") ;
+        alert("Checked")
+        alert(label.innerHTML)
+        console.log(label)
       } else {
         label = document.querySelector('#lbl'+idIndex);
         label.setAttribute("style","none") ;
+        alert("UnChecked")
       }
     }
     myDiv.appendChild(myCb);
